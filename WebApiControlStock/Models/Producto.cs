@@ -22,7 +22,7 @@ namespace WebApiControlStock.Models
 
         [PrecioMayorAtributte]
         [Column(TypeName ="money")]
-        public int Precio { get;}
+        public int Precio { get; set; }
 
         public int CategoriaID { get; set; }
         [ForeignKey("CategoriaID")]

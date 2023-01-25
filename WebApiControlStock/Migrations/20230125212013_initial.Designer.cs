@@ -9,7 +9,7 @@ using WebApiControlStock.Data;
 namespace WebApiControlStock.Migrations
 {
     [DbContext(typeof(DBControlStockContext))]
-    [Migration("20230125202005_initial")]
+    [Migration("20230125212013_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,9 @@ namespace WebApiControlStock.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("money");
 
                     b.HasKey("Id");
 

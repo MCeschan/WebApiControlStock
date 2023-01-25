@@ -52,6 +52,9 @@ namespace WebApiControlStock.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("money");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoriaID");

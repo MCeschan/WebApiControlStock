@@ -27,6 +27,7 @@ namespace WebApiControlStock.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "varchar(50)", nullable: false),
                     LineaProducto = table.Column<string>(type: "char(1)", nullable: false),
+                    Precio = table.Column<decimal>(type: "money", nullable: false),
                     CategoriaID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
