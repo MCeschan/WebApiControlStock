@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WebApiControlStock.Validations;
 
 namespace WebApiControlStock.Models
 {
@@ -16,15 +17,16 @@ namespace WebApiControlStock.Models
 
         [Required]
         [Column(TypeName ="char(1)")]
+        [SoloHSAtributte]
         public string LineaProducto { get; set; }
 
-
+        [PrecioMayorAtributte]
         [Column(TypeName ="money")]
         public int Precio { get;}
 
         public int CategoriaID { get; set; }
-        [ForeignKey("CategoriaId")]
+        [ForeignKey("CategoriaID")]
 
-        public Categoria categoria { get; set; }
+        public Categoria Categoria { get; set; }
     }
 }
